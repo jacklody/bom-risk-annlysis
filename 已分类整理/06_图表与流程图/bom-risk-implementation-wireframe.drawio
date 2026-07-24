@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net" modified="2026-06-24T00:00:00.000Z" agent="SOLO" version="24.7.17" type="device">
+  <diagram id="bom-risk-wireframe" name="BOM物料风险预警系统实施方案线框图">
+    <mxGraphModel background="#F2EFE8" grid="0" tooltips="0" connect="0" arrows="0" fold="0" page="0" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="border" value="" style="rounded=0;arcSize=3;fillColor=none;strokeColor=#B9B3AB;strokeWidth=1.5;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1614" height="1100" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="BOM物料风险预警系统实施方案线框图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontStyle=1;fontSize=32;fontColor=#1F1F1C;" vertex="1" parent="1">
+          <mxGeometry x="220" y="45" width="1210" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="从风险信息进入系统，到结构化识别、BOM匹配、风险评分和处置建议" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;fontSize=18;fontColor=#5F5A54;" vertex="1" parent="1">
+          <mxGeometry x="270" y="95" width="1110" height="36" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="g_input" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;输入来源&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=4;fillColor=#FAF8F4;strokeColor=#8C867F;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#5F5A54;swimlane;startSize=63;horizontal=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="160" width="330" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="input1" value="用户上传&lt;br&gt;BOM / 涨价函 / 邮件 / 图片" style="rounded=1;whiteSpace=wrap;arcSize=50;fillColor=#F8E9E1;strokeColor=#D88966;strokeWidth=1.8;fontColor=#D88966;fontSize=20;fontStyle=1;html=1;" vertex="1" parent="g_input">
+          <mxGeometry x="45" y="90" width="240" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="input2" value="自动获取&lt;br&gt;API / 价格快照 / 公告 / 资讯" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#EAF4FB;strokeColor=#6FA8D6;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_input">
+          <mxGeometry x="45" y="215" width="240" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="g_parse" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;事件结构化&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=4;fillColor=#FAF8F4;strokeColor=#8C867F;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#5F5A54;swimlane;startSize=63;horizontal=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="160" width="350" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="parse1" value="文本解析 / OCR / 字段抽取&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;厂商、品类、涨幅、生效日、原因&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#D7E6DC;strokeColor=#7FB08F;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_parse">
+          <mxGeometry x="45" y="90" width="260" height="92" as="geometry"/>
+        </mxCell>
+        <mxCell id="parse2" value="人工确认&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;修正厂商别名、品类范围和可信度&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#EEEAF9;strokeColor=#9A90D6;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_parse">
+          <mxGeometry x="45" y="225" width="260" height="88" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="g_engine" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;风险引擎&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=4;fillColor=#FAF8F4;strokeColor=#8C867F;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#5F5A54;swimlane;startSize=63;horizontal=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="160" width="360" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="engine1" value="生成风险事件&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;price_increase / EOL / lead_time&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#E6E2DA;strokeColor=#8C867F;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_engine">
+          <mxGeometry x="48" y="75" width="265" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="engine2" value="BOM匹配&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;品牌 / MPN / 品类 / 描述 / 波及&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#E6E2DA;strokeColor=#8C867F;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_engine">
+          <mxGeometry x="48" y="165" width="265" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="engine3" value="风险评分&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;交期 / 库存 / EOL / 涨价 / 通用性&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#F3E4DA;strokeColor=#C88E6A;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_engine">
+          <mxGeometry x="48" y="255" width="265" height="78" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="g_output" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;输出处置&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=4;fillColor=#FAF8F4;strokeColor=#8C867F;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#5F5A54;swimlane;startSize=63;horizontal=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="160" width="290" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="out1" value="物料级风险提示&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;命中料号、风险等级、证据来源&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#CFE8D7;strokeColor=#71AE88;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_output">
+          <mxGeometry x="35" y="80" width="220" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="out2" value="项目级影响汇总&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;命中项目、成本影响、紧急物料&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#CFE8D7;strokeColor=#71AE88;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_output">
+          <mxGeometry x="35" y="180" width="220" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="out3" value="处置建议&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;锁价 / 备货 / 替代 / 报价复核&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#F3E4DA;strokeColor=#C88E6A;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_output">
+          <mxGeometry x="35" y="280" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="g_roadmap" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;分阶段落地路线&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=4;fillColor=#FAF8F4;strokeColor=#8C867F;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#5F5A54;swimlane;startSize=63;horizontal=1;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="610" width="1510" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="phase1" value="阶段一&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;主动上传触发&lt;br&gt;涨价函解析 + 人工确认 + 历史BOM匹配&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#F8E9E1;strokeColor=#D88966;strokeWidth=1.8;fontColor=#D88966;fontSize=20;fontStyle=1;html=1;" vertex="1" parent="g_roadmap">
+          <mxGeometry x="55" y="100" width="300" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="phase2" value="阶段二&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;成本影响估算&lt;br&gt;单行 / 单板 / 批量成本三档测算&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#EAF4FB;strokeColor=#6FA8D6;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_roadmap">
+          <mxGeometry x="415" y="100" width="300" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="phase3" value="阶段三&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;自动获取&lt;br&gt;价格快照 / 公告 / 邮件监听 / 待确认事件&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#D7E6DC;strokeColor=#7FB08F;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_roadmap">
+          <mxGeometry x="775" y="100" width="300" height="115" as="geometry"/>
+        </mxCell>
+        <mxCell id="phase4" value="阶段四&lt;br&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;替代与决策建议&lt;br&gt;替代料、锁单清单、报价复核记录&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;arcSize=10;fillColor=#CFE8D7;strokeColor=#71AE88;strokeWidth=1.8;fontColor=#2D2B28;fontSize=20;html=1;" vertex="1" parent="g_roadmap">
+          <mxGeometry x="1135" y="100" width="300" height="115" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="note" value="线框重点：先把用户已收到的涨价通知转成结构化风险事件，再复用现有 MarketEvent + BOMMatcher 框架，与交期、库存、EOL、通用性风险合并输出。" style="rounded=1;whiteSpace=wrap;arcSize=6;fillColor=#EEF3F7;strokeColor=#B7C9D8;strokeWidth=1.5;fontColor=#44515C;fontSize=20;align=left;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="990" width="1230" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_input1_parse" edge="1" source="input1" target="parse1" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.45;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_input2_parse" edge="1" source="input2" target="parse1" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.65;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_parse1_parse2" edge="1" source="parse1" target="parse2" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#D88966;strokeWidth=1.8;rounded=1;dashed=1;dashPattern=6 6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_parse2_engine1" edge="1" source="parse2" target="engine1" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_engine1_engine2" edge="1" source="engine1" target="engine2" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_engine2_engine3" edge="1" source="engine2" target="engine3" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_engine3_out1" edge="1" source="engine3" target="out1" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.35;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_engine3_out2" edge="1" source="engine3" target="out2" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.65;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out1_out3" edge="1" source="out1" target="out3" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_out2_out3" edge="1" source="out2" target="out3" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_phase1_phase2" edge="1" source="phase1" target="phase2" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_phase2_phase3" edge="1" source="phase2" target="phase3" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_phase3_phase4" edge="1" source="phase3" target="phase4" style="endArrow=open;endSize=14;edgeStyle=orthogonalEdgeStyle;strokeColor=#7A756E;strokeWidth=1.8;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

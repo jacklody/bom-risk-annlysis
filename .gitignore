@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Logs
+*.log
+logs/
+start-logs/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+frontend-v2/dist/
+node_modules/
+
+# Runtime data
+*.db
+*.db-journal
+backup-*/
+run/
+
+# Local worktrees
+.worktrees/
+
+# Local agent progress
+.superpowers/
+.trae/
+.market/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Coverage
+.coverage
+
+# Docker
+docker-compose.override.yml
+
+# Database backups
+backups/
+
+# Test artifacts
+*.xlsx
+*.csv
+*.pdf
+!demo/*.csv
+
+# Local scripts
+*.bat
+*.ps1
+!deploy/*.ps1
+!scripts/*.ps1
