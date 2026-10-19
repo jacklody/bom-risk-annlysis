@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: bom-risk-analyzer
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/backend/data
+    environment:
+      - DATABASE_URL=sqlite:///data/market_risk.db
+      - METALS_API_KEY=${METALS_API_KEY:-}
+      - CORS_ALLOWED_ORIGINS=*
+    restart: unless-stopped
+
+  # 可选：生产部署建议 Nginx 反向代理
+  # nginx:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #   depends_on:
+  #     - backend
